@@ -1,0 +1,4046 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shri Varshney College, Aligarh - Excellence in Education</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* ==================== ROOT VARIABLES ==================== */
+        :root {
+            --primary-color: #1a3a52;      /* Dark Blue */
+            --accent-color: #d4af37;       /* Gold - Use in moderation */
+            --accent-dark: #b8860b;        /* Dark Gold - Better contrast */
+            --success-color: #27ae60;      /* Green - Success states */
+            --light-bg: #f8f9fa;           /* Light Gray */
+            --text-dark: #333333;          /* Dark Text */
+            --text-light: #666666;         /* Light Gray Text */
+            --white: #ffffff;
+            --border-radius: 12px;         /* Unified border radius */
+            --border-radius-lg: 15px;      /* Large border radius */
+            --border-radius-xl: 20px;      /* Extra large border radius */
+            --transition: all 0.3s ease-in-out;
+            --transition-fast: all 0.2s ease-in-out;
+            --transition-smooth: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+            --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.12);
+            --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.16);
+            --shadow-glow: 0 0 25px rgba(212, 175, 55, 0.3);
+            --gradient-primary: linear-gradient(135deg, #1a3a52 0%, #2d5a7b 100%);
+            --gradient-accent: linear-gradient(135deg, #d4af37 0%, #e8c547 100%);
+            --spacing-unit: 1rem;
+        }
+
+        /* ==================== GLOBAL STYLES ==================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background-color: var(--white);
+        }
+
+        /* ==================== NAVBAR STYLES ==================== */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(26, 58, 82, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+            padding: 0.8rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+        }
+
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* Logo Section */
+        .navbar-logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: var(--transition);
+        }
+
+        .navbar-logo:hover {
+            transform: translateY(-2px);
+            text-shadow: 0 2px 8px rgba(212, 175, 55, 0.3);
+        }
+
+        .navbar-logo i {
+            font-size: 2rem;
+        }
+
+        /* Navigation Menu */
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-link {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: var(--transition);
+            padding: 0.5rem 0;
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--accent-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .nav-link:hover {
+            color: var(--accent-color);
+        }
+
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 0.5rem;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: var(--accent-color);
+            border-radius: 2px;
+            transition: var(--transition);
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(8px, 8px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(8px, -8px);
+        }
+
+        /* ==================== HERO SECTION ==================== */
+        .hero {
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(135deg, #1a3a52 0%, #0f2637 50%, #1a3a52 100%),
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="%23fff" stroke-width="0.5" opacity="0.05"/></pattern></defs><rect width="1200" height="600" fill="%231a3a52"/><rect width="1200" height="600" fill="url(%23grid)"/><circle cx="200" cy="150" r="80" fill="%23d4af37" opacity="0.08"/><circle cx="1000" cy="400" r="120" fill="%23d4af37" opacity="0.04"/></svg>');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+            margin-top: 60px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(26, 58, 82, 0.6) 0%, rgba(212, 175, 55, 0.08) 100%);
+            z-index: 1;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: linear-gradient(to top, rgba(248, 249, 250, 0.1), transparent);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            animation: fadeInUp 1s ease-out;
+            padding: 2rem;
+        }
+
+        /* Hero Title */
+        .hero-title {
+            font-size: clamp(2rem, 6vw, 4rem);
+            font-weight: 900;
+            margin-bottom: 0.8rem;
+            letter-spacing: -2px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+            animation: slideDownFade 0.8s ease-out;
+            line-height: 1.2;
+        }
+
+        .hero-title .accent {
+            color: var(--accent-color);
+            display: block;
+        }
+
+        /* Hero Tagline */
+        .hero-tagline {
+            font-size: clamp(1.1rem, 3vw, 1.8rem);
+            color: rgba(255, 255, 255, 0.98);
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+            letter-spacing: 1px;
+            animation: slideUpFade 0.8s ease-out 0.2s backwards;
+            font-style: italic;
+        }
+
+        /* Hero Buttons */
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: slideUpFade 0.8s ease-out 0.4s backwards;
+        }
+
+        .btn {
+            padding: 0.95rem 2.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 700;
+            letter-spacing: 0.8px;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+            text-transform: uppercase;
+            box-shadow: var(--shadow-md);
+            font-size: 0.9rem;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.6s ease, height 0.6s ease;
+            z-index: 0;
+        }
+
+        .btn:hover::before {
+            width: 400px;
+            height: 400px;
+        }
+
+        .btn::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
+            transform: translateX(-100%);
+            transition: transform 0.6s ease;
+        }
+
+        .btn:hover::after {
+            transform: translateX(100%);
+        }
+
+        .btn-primary {
+            background: var(--gradient-accent);
+            color: var(--primary-color);
+            box-shadow: 0 6px 25px rgba(212, 175, 55, 0.35);
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn-primary:hover {
+            box-shadow: 0 12px 40px rgba(212, 175, 55, 0.45);
+            transform: translateY(-3px);
+        }
+
+        .btn-secondary {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-color: var(--white);
+            color: var(--white);
+            box-shadow: 0 12px 40px rgba(255, 255, 255, 0.25);
+            transform: translateY(-3px);
+        }
+
+        /* Scroll Down Indicator */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            animation: bounce 2s infinite;
+        }
+
+        .scroll-indicator svg {
+            width: 24px;
+            height: 40px;
+            stroke: var(--white);
+            fill: none;
+            stroke-width: 2;
+        }
+
+        /* ==================== ANIMATIONS ==================== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideDownFade {
+            from {
+                opacity: 0;
+                transform: translateY(-40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideUpFade {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes shimmer {
+            0% {
+                transform: translateX(-100%) translateY(-100%) rotate(45deg);
+            }
+            100% {
+                transform: translateX(100%) translateY(100%) rotate(45deg);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            50% {
+                transform: translateX(-50%) translateY(-15px);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.7;
+            }
+        }
+
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-60px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(60px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes glow {
+            0%, 100% {
+                box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+            }
+            50% {
+                box-shadow: 0 0 25px rgba(212, 175, 55, 0.6);
+            }
+        }
+
+        @keyframes rotateIn {
+            from {
+                opacity: 0;
+                transform: rotate(-10deg) scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: rotate(0) scale(1);
+            }
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Section entrance animations */
+        section {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* ==================== UNIVERSITY PREMIUM STYLING ==================== */
+        
+        /* Ranking Badge */
+        .hero-badge {
+            position: absolute;
+            top: 100px;
+            right: 40px;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.95) 0%, rgba(232, 197, 71, 0.95) 100%);
+            color: var(--primary-color);
+            padding: 1rem 1.8rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            z-index: 10;
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.35);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            animation: float 3s ease-in-out infinite;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Stats Section */
+        .hero-stats {
+            position: absolute;
+            bottom: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 4rem;
+            z-index: 10;
+            animation: slideUpFade 0.9s ease-out 0.5s backwards;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--white);
+            display: block;
+            margin-bottom: 0.3rem;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(135deg, #d4af37, #e8c547);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.9);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        /* Accreditation Section */
+        .accreditation {
+            padding: 3rem 2rem;
+            background: linear-gradient(135deg, rgba(26, 58, 82, 0.04) 0%, rgba(212, 175, 55, 0.03) 100%);
+            border-top: 2px solid rgba(212, 175, 55, 0.1);
+            border-bottom: 2px solid rgba(212, 175, 55, 0.1);
+            margin: -1px 0 0 0;
+        }
+
+        .accreditation-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .accreditation-item {
+            text-align: center;
+            flex: 1;
+            min-width: 150px;
+        }
+
+        .accreditation-icon {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .accreditation-text {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        /* Rankings & Achievements */
+        .rankings {
+            padding: 5rem 2rem;
+            background: linear-gradient(135deg, var(--light-bg) 0%, rgba(212, 175, 55, 0.02) 100%);
+        }
+
+        .rankings-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .rankings-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .rankings-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .rankings-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .ranking-card {
+            background: var(--white);
+            padding: 2.5rem 2rem;
+            border-radius: var(--border-radius-lg);
+            text-align: center;
+            box-shadow: var(--shadow-md);
+            border: 1px solid rgba(212, 175, 55, 0.12);
+            transition: var(--transition);
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .ranking-card:nth-child(1) { animation-delay: 0.1s; }
+        .ranking-card:nth-child(2) { animation-delay: 0.2s; }
+        .ranking-card:nth-child(3) { animation-delay: 0.3s; }
+        .ranking-card:nth-child(4) { animation-delay: 0.4s; }
+
+        .ranking-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 20px 50px rgba(212, 175, 55, 0.2);
+            border-color: rgba(212, 175, 55, 0.25);
+        }
+
+        .ranking-number {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .ranking-label {
+            font-size: 1rem;
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+        }
+
+        .ranking-description {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* World Class Features */
+        .features {
+            padding: 5rem 2rem;
+            background-color: var(--white);
+        }
+
+        .features-container {
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .features-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .features-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: var(--white);
+            padding: 2.2rem;
+            border-radius: var(--border-radius-lg);
+            border: 1px solid rgba(212, 175, 55, 0.12);
+            transition: var(--transition);
+            animation: fadeInUp 0.6s ease-out;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 0;
+            background: var(--gradient-accent);
+            transition: height 0.4s ease;
+        }
+
+        .feature-card:nth-child(1) { animation-delay: 0.1s; }
+        .feature-card:nth-child(2) { animation-delay: 0.2s; }
+        .feature-card:nth-child(3) { animation-delay: 0.3s; }
+        .feature-card:nth-child(4) { animation-delay: 0.2s; }
+        .feature-card:nth-child(5) { animation-delay: 0.3s; }
+        .feature-card:nth-child(6) { animation-delay: 0.4s; }
+
+        .feature-card:hover::before {
+            height: 100%;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 20px 50px rgba(212, 175, 55, 0.15);
+            border-color: rgba(212, 175, 55, 0.2);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        .feature-card h3 {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            margin-bottom: 0.8rem;
+            font-weight: 700;
+        }
+
+        .feature-card p {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* ==================== NAVBAR MOBILE ACCESSIBILITY ==================== */
+        .nav-link:focus-visible {
+            outline: 2px solid var(--accent-color);
+            outline-offset: 2px;
+        }
+
+        /* ==================== SKIP TO MAIN CONTENT ==================== */
+        .skip-to-main {
+            position: absolute;
+            left: -9999px;
+            z-index: 999;
+        }
+
+        .skip-to-main:focus {
+            left: 0;
+            top: 0;
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 1rem;
+            text-decoration: none;
+        }
+
+        /* Gold accent underline on titles */
+        section > .container > h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: var(--gradient-accent);
+            border-radius: 2px;
+        }
+
+        /* ==================== RESPONSIVE DESIGN ==================== */
+        @media (max-width: 768px) {
+            /* Mobile Navbar */
+            .navbar {
+                padding: 1rem;
+            }
+
+            .navbar-logo {
+                font-size: 1.3rem;
+            }
+
+            .navbar-logo i {
+                font-size: 1.5rem;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-menu {
+                position: absolute;
+                top: 60px;
+                left: 0;
+                right: 0;
+                background-color: rgba(26, 58, 82, 0.99);
+                flex-direction: column;
+                gap: 0;
+                padding: 2rem 1rem;
+                display: none;
+                border-top: 2px solid var(--accent-color);
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .nav-item {
+                width: 100%;
+                padding: 1rem 0;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            .nav-item:last-child {
+                border-bottom: none;
+            }
+
+            .nav-link {
+                font-size: 1.1rem;
+                display: block;
+            }
+
+            .nav-link::after {
+                display: none;
+            }
+
+            /* Mobile Hero */
+            .hero {
+                margin-top: 70px;
+            }
+
+            .hero-title {
+                font-size: 2rem;
+                margin-bottom: 1rem;
+            }
+
+            .hero-tagline {
+                font-size: 1rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+
+        /* ==================== ABOUT SECTION ==================== */
+        .about {
+            padding: 5rem 2rem;
+            background-color: var(--white);
+        }
+
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .about-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .about-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background-color: var(--accent-color);
+            border-radius: 2px;
+        }
+
+        .about-subtitle {
+            font-size: 1rem;
+            color: var(--text-light);
+            max-width: 500px;
+            margin: 2rem auto 0;
+            line-height: 1.8;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            margin-bottom: 5rem;
+        }
+
+        .about-image {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            animation: fadeInLeft 1s ease-out 0.2s backwards;
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .about-image::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent 30%, rgba(212, 175, 55, 0.1) 50%, transparent 70%);
+            animation: shimmer 3s infinite;
+            z-index: 1;
+        }
+
+        .about-text {
+            animation: fadeInRight 1s ease-out 0.2s backwards;
+        }
+
+        .about-text h3 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-left: 20px;
+            animation: slideInLeft 0.7s ease-out;
+        }
+
+        .about-text h3::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 30px;
+            background-color: var(--accent-color);
+            border-radius: 2px;
+        }
+
+        .about-text p {
+            color: var(--text-light);
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            text-align: justify;
+            animation: fadeInUp 0.8s ease-out 0.2s backwards;
+        }
+
+        .about-highlights {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .highlight-item {
+            flex: 1;
+            min-width: 150px;
+            padding: 1.5rem;
+            background: var(--white);
+            border-left: 5px solid var(--accent-color);
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+            box-shadow: var(--shadow-md);
+            border: 1px solid rgba(212, 175, 55, 0.12);
+            position: relative;
+        }
+
+        .highlight-item::before {
+            content: none;
+        }
+
+        .highlight-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.2);
+            border-color: rgba(212, 175, 55, 0.2);
+        }
+
+        .highlight-item strong {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .highlight-item p {
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        /* Principal Message Section */
+        .principal-section {
+            background: var(--white);
+            border: 1px solid rgba(212, 175, 55, 0.12);
+            padding: 3rem 2rem;
+            border-radius: var(--border-radius-lg);
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 2rem;
+            align-items: center;
+            animation: fadeInUp 1s ease-out 0.4s backwards;
+            box-shadow: var(--shadow-md);
+        }
+
+        .principal-image {
+            flex-shrink: 0;
+        }
+
+        .principal-image img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid var(--accent-color);
+            object-fit: cover;
+            box-shadow: 0 12px 35px rgba(212, 175, 55, 0.25);
+            transition: var(--transition);
+        }
+
+        .principal-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .principal-content h4 {
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            animation: slideInRight 0.7s ease-out;
+        }
+
+        .principal-content .position {
+            color: var(--accent-color);
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .principal-content p {
+            color: var(--text-light);
+            line-height: 1.8;
+            text-align: justify;
+            animation: fadeInUp 0.8s ease-out 0.3s backwards;
+        }
+
+        /* ==================== ANIMATIONS ==================== */
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes shimmer {
+            0% {
+                transform: translateX(-100%) translateY(-100%) rotate(45deg);
+            }
+            100% {
+                transform: translateX(100%) translateY(100%) rotate(45deg);
+            }
+        }
+
+        /* ==================== RESPONSIVE DESIGN - ABOUT ==================== */
+        @media (max-width: 768px) {
+            .about {
+                padding: 3rem 1rem;
+            }
+
+            .about-title {
+                font-size: 2rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .about-image img {
+                height: 300px;
+            }
+
+            .principal-section {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 1.5rem;
+            }
+
+            .principal-image {
+                display: flex;
+                justify-content: center;
+            }
+
+            .about-text p {
+                text-align: left;
+            }
+
+            .principal-content p {
+                text-align: left;
+            }
+
+            .about-highlights {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .about {
+                padding: 2rem 1rem;
+            }
+
+            .about-title {
+                font-size: 1.5rem;
+            }
+
+            .about-text h3 {
+                font-size: 1.3rem;
+            }
+
+            .about-highlights {
+                gap: 1rem;
+            }
+
+            .highlight-item {
+                padding: 1rem;
+            }
+
+            .principal-image img {
+                width: 120px;
+                height: 120px;
+            }
+        }
+
+        /* ==================== DEPARTMENTS SECTION ==================== */
+        .departments {
+            padding: 5rem 2rem;
+            background-color: var(--light-bg);
+        }
+
+        .departments-container {
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .departments-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .departments-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .departments-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background-color: var(--accent-color);
+            border-radius: 2px;
+        }
+
+        .departments-subtitle {
+            font-size: 1rem;
+            color: var(--text-light);
+            max-width: 500px;
+            margin: 2rem auto 0;
+            line-height: 1.8;
+        }
+
+        /* Department Cards Grid */
+        .departments-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .dept-card {
+            background: var(--white);
+            border: 1px solid rgba(212, 175, 55, 0.12);
+            border-radius: var(--border-radius-lg);
+            padding: 2rem;
+            text-align: center;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            animation: fadeInUp 0.6s ease-out;
+            animation-fill-mode: both;
+        }
+
+        /* Staggered animation for cards */
+        .dept-card:nth-child(1) { animation-delay: 0.1s; }
+        .dept-card:nth-child(2) { animation-delay: 0.2s; }
+        .dept-card:nth-child(3) { animation-delay: 0.3s; }
+        .dept-card:nth-child(4) { animation-delay: 0.4s; }
+        .dept-card:nth-child(5) { animation-delay: 0.5s; }
+        .dept-card:nth-child(6) { animation-delay: 0.6s; }
+        .dept-card:nth-child(7) { animation-delay: 0.7s; }
+
+        /* Card Background Accent */
+        .dept-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent-color), var(--primary-color));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.5s ease;
+        }
+
+        .dept-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        /* Hover Effects */
+        .dept-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 50px rgba(212, 175, 55, 0.25);
+            border-color: rgba(212, 175, 55, 0.25);
+            animation: glow 2s ease-in-out infinite;
+        }
+
+        /* Icon Container */
+        .dept-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+            background: var(--gradient-accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: var(--white);
+            transition: var(--transition);
+            box-shadow: 0 8px 30px rgba(212, 175, 55, 0.35);
+        }
+
+        .dept-card:hover .dept-icon {
+            transform: scale(1.15) rotateY(360deg);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+        }
+
+        /* Card Title */
+        .dept-card h3 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-weight: 700;
+            transition: var(--transition);
+            position: relative;
+            z-index: 2;
+        }
+
+        .dept-card h3::before {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: var(--gradient-accent);
+            transition: width 0.4s ease;
+        }
+
+        .dept-card:hover h3::before {
+            width: 100%;
+        }
+
+        .dept-card:hover h3 {
+            color: var(--accent-color);
+        }
+
+        /* Card Description */
+        .dept-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Learn More Link */
+        .dept-link {
+            display: inline-block;
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            padding: 0.6rem 1.5rem;
+            border: 2px solid var(--accent-color);
+            border-radius: 6px;
+            transition: var(--transition-fast);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .dept-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background-color: var(--accent-color);
+            z-index: -1;
+            transition: left 0.3s ease;
+        }
+
+        .dept-link:hover {
+            color: var(--white);
+        }
+
+        .dept-link:hover::before {
+            left: 0;
+        }
+
+        /* ==================== RESPONSIVE DESIGN - DEPARTMENTS ==================== */
+        @media (max-width: 768px) {
+            .departments {
+                padding: 3rem 1rem;
+            }
+
+            .departments-title {
+                font-size: 2rem;
+            }
+
+            .departments-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 1.5rem;
+            }
+
+            .dept-card {
+                padding: 1.5rem;
+            }
+
+            .dept-icon {
+                width: 70px;
+                height: 70px;
+                font-size: 2rem;
+            }
+
+            .dept-card h3 {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .departments {
+                padding: 2rem 1rem;
+            }
+
+            .departments-title {
+                font-size: 1.5rem;
+            }
+
+            .departments-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .dept-card {
+                padding: 1.2rem;
+            }
+
+            .dept-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+            }
+
+            .dept-card h3 {
+                font-size: 1.1rem;
+            }
+
+            .dept-card p {
+                font-size: 0.85rem;
+            }
+        }
+
+        /* ==================== ADMISSION SECTION ==================== */
+        .admission {
+            padding: 5rem 2rem;
+            background-color: var(--white);
+        }
+
+        .admission-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .admission-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .admission-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .admission-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background-color: var(--accent-color);
+            border-radius: 2px;
+        }
+
+        .admission-subtitle {
+            font-size: 1rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 2rem auto 0;
+            line-height: 1.8;
+        }
+
+        /* Admission Content Grid */
+        .admission-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 4rem;
+            align-items: start;
+        }
+
+        /* Instructions Section */
+        .admission-instructions {
+            animation: fadeInLeft 1s ease-out 0.2s backwards;
+        }
+
+        .admission-instructions h3 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .admission-instructions h3::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 30px;
+            background-color: var(--accent-color);
+            border-radius: 2px;
+        }
+
+        .instructions-list {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .instructions-list li {
+            padding: 1rem;
+            margin-bottom: 1rem;
+            background-color: var(--light-bg);
+            border-left: 4px solid var(--accent-color);
+            border-radius: 6px;
+            color: var(--text-light);
+            transition: var(--transition-fast);
+            position: relative;
+            padding-left: 2rem;
+            border: 1px solid rgba(212, 175, 55, 0.12);
+        }
+
+        .instructions-list li::before {
+            content: '';
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 8px;
+            background-color: var(--accent-color);
+            border-radius: 50%;
+        }
+
+        .instructions-list li:hover {
+            background-color: rgba(212, 175, 55, 0.05);
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Important Dates */
+        .important-dates {
+            background: var(--light-bg);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--accent-color);
+            margin-top: 2rem;
+            border: 1px solid rgba(212, 175, 55, 0.12);
+        }
+
+        .important-dates h4 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .dates-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .dates-item:last-child {
+            border-bottom: none;
+        }
+
+        .dates-item strong {
+            color: var(--primary-color);
+        }
+
+        /* Fee Structure Table */
+        .fee-structure {
+            animation: fadeInRight 1s ease-out 0.2s backwards;
+        }
+
+        .fee-structure h3 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .fee-structure h3::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 30px;
+            background-color: var(--accent-color);
+            border-radius: 2px;
+        }
+
+        .fee-table {
+            width: 100%;
+            border-collapse: collapse;
+            box-shadow: var(--shadow-lg);
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        .fee-table thead {
+            background: linear-gradient(135deg, var(--primary-color) 0%, rgba(26, 58, 82, 0.85) 100%);
+            color: var(--white);
+        }
+
+        .fee-table th {
+            padding: 1.3rem 1.2rem;
+            text-align: left;
+            font-weight: 700;
+            letter-spacing: 0.8px;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+        }
+
+        .fee-table tbody tr {
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+            transition: var(--transition);
+        }
+
+        .fee-table tbody tr:hover {
+            background: linear-gradient(90deg, rgba(212, 175, 55, 0.08) 0%, rgba(212, 175, 55, 0.04) 100%);
+            box-shadow: inset 0 0 15px rgba(212, 175, 55, 0.12);
+        }
+
+        .fee-table tbody tr:last-child {
+            border-bottom: none;
+        }
+
+        .fee-table td {
+            padding: 1.1rem 1.2rem;
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .fee-table td:first-child {
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .fee-table td:last-child {
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+
+        /* Admission CTA Buttons */
+        .admission-cta {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .admission-cta .btn {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+        }
+
+        /* Full Width Section - Additional Info */
+        .admission-info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+            padding-top: 4rem;
+            border-top: 2px solid var(--light-bg);
+        }
+
+        .info-box {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: var(--border-radius-lg);
+            text-align: center;
+            transition: var(--transition);
+            animation: fadeInUp 0.6s ease-out;
+            border: 1px solid rgba(212, 175, 55, 0.12);
+            box-shadow: var(--shadow-md);
+        }
+
+        .info-box:nth-child(1) { animation-delay: 0.1s; }
+        .info-box:nth-child(2) { animation-delay: 0.2s; }
+        .info-box:nth-child(3) { animation-delay: 0.3s; }
+
+        .info-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 50px rgba(212, 175, 55, 0.18);
+            border-color: rgba(212, 175, 55, 0.25);
+        }
+
+        .info-box-icon {
+            font-size: 3rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        .info-box h4 {
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            margin-bottom: 0.8rem;
+        }
+
+        .info-box p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* ==================== RESPONSIVE DESIGN - ADMISSION ==================== */
+        @media (max-width: 768px) {
+            .admission {
+                padding: 3rem 1rem;
+            }
+
+            .admission-title {
+                font-size: 2rem;
+            }
+
+            .admission-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .fee-table {
+                font-size: 0.85rem;
+            }
+
+            .fee-table th,
+            .fee-table td {
+                padding: 0.8rem;
+            }
+
+            .admission-cta {
+                flex-direction: column;
+            }
+
+            .admission-cta .btn {
+                width: 100%;
+            }
+
+            .admission-info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .admission {
+                padding: 2rem 1rem;
+            }
+
+            .admission-title {
+                font-size: 1.5rem;
+            }
+
+            .admission-instructions h3,
+            .fee-structure h3 {
+                font-size: 1.2rem;
+            }
+
+            .instructions-list li {
+                padding: 0.8rem;
+                padding-left: 1.5rem;
+                margin-bottom: 0.8rem;
+                font-size: 0.9rem;
+            }
+
+            .fee-table {
+                font-size: 0.75rem;
+            }
+
+            .fee-table th,
+            .fee-table td {
+                padding: 0.6rem;
+            }
+
+            .info-box {
+                padding: 1.5rem;
+            }
+
+            .info-box-icon {
+                font-size: 2.5rem;
+            }
+
+            .info-box h4 {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar {
+                padding: 0.8rem 0.5rem;
+            }
+
+            .navbar-logo {
+                font-size: 1rem;
+            }
+
+            .navbar-logo i {
+                font-size: 1.2rem;
+            }
+
+            .hero-title {
+                font-size: 1.5rem;
+            }
+
+            .hero-tagline {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* ==================== NOTICE BOARD SECTION ==================== */
+        .notice {
+            padding: 5rem 2rem;
+            background: linear-gradient(135deg, var(--light-bg) 0%, rgba(212, 175, 55, 0.05) 100%);
+        }
+
+        .notice-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .notice-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .notice-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .notice-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background-color: var(--accent-color);
+            border-radius: 2px;
+        }
+
+        .notice-subtitle {
+            font-size: 1rem;
+            color: var(--text-light);
+            max-width: 500px;
+            margin: 2rem auto 0;
+        }
+
+        /* Notice Items */
+        .notice-items {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .notice-item {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            border-left: 5px solid var(--accent-color);
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            animation: slideUpFade 0.6s ease-out;
+            border: 1px solid rgba(212, 175, 55, 0.12);
+        }
+
+        .notice-item:nth-child(1) { animation-delay: 0.1s; }
+        .notice-item:nth-child(2) { animation-delay: 0.2s; }
+        .notice-item:nth-child(3) { animation-delay: 0.3s; }
+        .notice-item:nth-child(4) { animation-delay: 0.4s; }
+        .notice-item:nth-child(5) { animation-delay: 0.5s; }
+
+        .notice-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 10px 35px rgba(212, 175, 55, 0.25);
+            border-left-color: #e8c547;
+            animation: float 2s ease-in-out infinite;
+        }
+
+        .notice-date {
+            font-size: 0.85rem;
+            color: var(--accent-color);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .notice-title-text {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+        }
+
+        .notice-description {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .notice-link {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: var(--transition);
+        }
+
+        .notice-link:hover {
+            gap: 1rem;
+        }
+
+        .view-all-notices {
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        /* ==================== GALLERY SECTION ==================== */
+        .gallery {
+            padding: 5rem 2rem;
+            background-color: var(--white);
+        }
+
+        .gallery-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .gallery-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .gallery-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .gallery-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background-color: var(--accent-color);
+            border-radius: 2px;
+        }
+
+        .gallery-subtitle {
+            font-size: 1rem;
+            color: var(--text-light);
+            max-width: 500px;
+            margin: 2rem auto 0;
+        }
+
+        /* Gallery Grid */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            aspect-ratio: 4 / 3;
+            cursor: pointer;
+            box-shadow: var(--shadow-md);
+            animation: fadeInUp 0.6s ease-out;
+            border: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        .gallery-item:nth-child(1) { animation-delay: 0.1s; }
+        .gallery-item:nth-child(2) { animation-delay: 0.2s; }
+        .gallery-item:nth-child(3) { animation-delay: 0.3s; }
+        .gallery-item:nth-child(4) { animation-delay: 0.4s; }
+        .gallery-item:nth-child(5) { animation-delay: 0.5s; }
+        .gallery-item:nth-child(6) { animation-delay: 0.6s; }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(26, 58, 82, 0.85) 0%, rgba(212, 175, 55, 0.1) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: 2;
+            backdrop-filter: blur(5px);
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .zoom-icon {
+            width: 60px;
+            height: 60px;
+            background-color: var(--accent-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            transition: var(--transition);
+            transform: scale(0.8);
+        }
+
+        .gallery-overlay:hover .zoom-icon {
+            transform: scale(1);
+        }
+
+        /* ==================== ALUMNI SECTION ==================== */
+        .alumni {
+            padding: 5rem 2rem;
+            background: linear-gradient(135deg, var(--light-bg) 0%, rgba(212, 175, 55, 0.05) 100%);
+        }
+
+        .alumni-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .alumni-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .alumni-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .alumni-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background-color: var(--accent-color);
+            border-radius: 2px;
+        }
+
+        .alumni-subtitle {
+            font-size: 1rem;
+            color: var(--text-light);
+            max-width: 500px;
+            margin: 2rem auto 0;
+        }
+
+        /* Testimonials Grid */
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            animation: fadeInUp 0.6s ease-out;
+            position: relative;
+            border: 1px solid rgba(212, 175, 55, 0.12);
+        }
+
+        .testimonial-card:nth-child(1) { animation-delay: 0.1s; }
+        .testimonial-card:nth-child(2) { animation-delay: 0.2s; }
+        .testimonial-card:nth-child(3) { animation-delay: 0.3s; }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            font-size: 4rem;
+            color: var(--accent-color);
+            opacity: 0.3;
+            font-weight: bold;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 50px rgba(212, 175, 55, 0.2);
+            border-color: rgba(212, 175, 55, 0.25);
+        }
+
+        .testimonial-header {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            align-items: center;
+        }
+
+        .testimonial-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .testimonial-info h4 {
+            color: var(--primary-color);
+            font-size: 1rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .testimonial-info p {
+            color: var(--accent-color);
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .testimonial-text {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-rating {
+            color: var(--accent-color);
+            font-size: 0.9rem;
+        }
+
+        .alumni-cta {
+            text-align: center;
+            padding: 3rem 2rem;
+            background-color: var(--white);
+            border-radius: 10px;
+            border-left: 6px solid var(--accent-color);
+            animation: fadeInUp 0.8s ease-out 0.4s backwards;
+        }
+
+        .alumni-cta h3 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .alumni-cta p {
+            color: var(--text-light);
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* ==================== CONTACT SECTION ==================== */
+        .contact {
+            padding: 5rem 2rem;
+            background-color: var(--white);
+        }
+
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .contact-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .contact-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .contact-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background-color: var(--accent-color);
+            border-radius: 2px;
+        }
+
+        .contact-subtitle {
+            font-size: 1rem;
+            color: var(--text-light);
+            max-width: 500px;
+            margin: 2rem auto 0;
+        }
+
+        /* Contact Grid */
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            animation: fadeInLeft 1s ease-out 0.2s backwards;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .form-group label .required {
+            color: #e74c3c;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid rgba(212, 175, 55, 0.2);
+            border-radius: var(--border-radius);
+            font-family: inherit;
+            font-size: 0.95rem;
+            transition: var(--transition-fast);
+            color: var(--text-dark);
+            background-color: var(--white);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: rgba(102, 102, 102, 0.5);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1), 0 4px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        .form-group input.error,
+        .form-group textarea.error {
+            border-color: #e74c3c;
+        }
+
+        .form-group input.error:focus,
+        .form-group textarea.error:focus {
+            box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1), 0 4px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        .form-error-message {
+            color: #e74c3c;
+            font-size: 0.85rem;
+            margin-top: 0.3rem;
+            display: none;
+        }
+
+        .form-group input.error ~ .form-error-message,
+        .form-group textarea.error ~ .form-error-message {
+            display: block;
+        }
+
+        .form-success-message {
+            color: var(--success-color);
+            background: rgba(39, 174, 96, 0.1);
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--success-color);
+            margin-bottom: 1.5rem;
+            display: none;
+            animation: slideDownFade 0.4s ease-out;
+        }
+
+        .form-success-message.show {
+            display: block;
+        }
+
+        .form-submit {
+            background: var(--gradient-accent);
+            color: var(--primary-color);
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: var(--border-radius);
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition-fast);
+            width: 100%;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 6px 25px rgba(212, 175, 55, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .form-submit:hover:not(:disabled) {
+            background: linear-gradient(135deg, #e8c547 0%, #d4af37 100%);
+            box-shadow: 0 10px 35px rgba(212, 175, 55, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .form-submit:active:not(:disabled) {
+            transform: translateY(0);
+        }
+
+        .form-submit:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+
+        .form-submit.loading::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 16px;
+            height: 16px;
+            margin: -8px 0 0 -8px;
+            border: 2px solid rgba(26, 58, 82, 0.3);
+            border-top-color: var(--primary-color);
+            border-radius: 50%;
+            animation: spin 0.6s linear infinite;
+        }
+
+        /* Contact Info */
+        .contact-info {
+            animation: fadeInRight 1s ease-out 0.2s backwards;
+        }
+
+        .contact-info-item {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            border-left: 5px solid var(--accent-color);
+            margin-bottom: 2rem;
+            transition: var(--transition);
+            border: 1px solid rgba(212, 175, 55, 0.12);
+            box-shadow: var(--shadow-md);
+        }
+
+        .contact-info-item:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-8px);
+            border-color: rgba(212, 175, 55, 0.3);
+        }
+
+        .contact-info-icon {
+            font-size: 1.8rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        .contact-info-item h4 {
+            color: var(--primary-color);
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-info-item p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .contact-info-item a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .contact-info-item a:hover {
+            text-decoration: underline;
+        }
+
+        /* Map Container */
+        .map-container {
+            width: 100%;
+            height: 350px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            margin-top: 3rem;
+            border: 1px solid rgba(212, 175, 55, 0.15);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* ==================== FOOTER ==================== */
+        .footer {
+            background: linear-gradient(135deg, #1a3a52 0%, #0f2637 50%, #1a3a52 100%);
+            color: var(--white);
+            padding: 3rem 2rem 1rem;
+            border-top: 1px solid rgba(212, 175, 55, 0.15);
+            position: relative;
+            backdrop-filter: blur(10px);
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+            font-weight: 700;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-section ul li a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 0.95rem;
+        }
+
+        .footer-section ul li a:hover {
+            color: var(--accent-color);
+            padding-left: 5px;
+        }
+
+        /* Social Icons */
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-icon {
+            width: 45px;
+            height: 45px;
+            background: var(--gradient-accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 1.1rem;
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.3);
+        }
+
+        .social-icon:hover {
+            transform: translateY(-8px) scale(1.1);
+            box-shadow: 0 12px 35px rgba(212, 175, 55, 0.4);
+        }
+
+        /* Footer Bottom */
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+            text-align: center;
+        }
+
+        .footer-bottom p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-bottom .accent {
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+
+        /* ==================== RESPONSIVE DESIGN - REMAINING SECTIONS ==================== */
+        @media (max-width: 768px) {
+            .hero-badge {
+                top: 70px;
+                right: 20px;
+                padding: 0.7rem 1.2rem;
+                font-size: 0.75rem;
+            }
+
+            .hero-stats {
+                gap: 2rem;
+                bottom: 40px;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            .stat-label {
+                font-size: 0.75rem;
+            }
+
+            .accreditation-container {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            .accreditation-item {
+                flex: 1;
+                width: 100%;
+            }
+
+            .rankings-grid,
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .notice {
+                padding: 3rem 1rem;
+            }
+
+            .notice-title {
+                font-size: 2rem;
+            }
+
+            .notice-items {
+                max-width: 100%;
+            }
+
+            .gallery {
+                padding: 3rem 1rem;
+            }
+
+            .gallery-title {
+                font-size: 2rem;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 1rem;
+            }
+
+            .alumni {
+                padding: 3rem 1rem;
+            }
+
+            .alumni-title {
+                font-size: 2rem;
+            }
+
+            .testimonials {
+                grid-template-columns: 1fr;
+            }
+
+            .contact {
+                padding: 3rem 1rem;
+            }
+
+            .contact-title {
+                font-size: 2rem;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .map-container {
+                height: 250px;
+            }
+
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-badge {
+                top: 60px;
+                right: 15px;
+                padding: 0.6rem 1rem;
+                font-size: 0.7rem;
+            }
+
+            .hero-stats {
+                gap: 1.5rem;
+                bottom: 30px;
+                flex-wrap: wrap;
+            }
+
+            .stat-number {
+                font-size: 1.5rem;
+            }
+
+            .stat-label {
+                font-size: 0.7rem;
+            }
+
+            .accreditation {
+                padding: 2rem 1rem;
+            }
+
+            .rankings {
+                padding: 2rem 1rem;
+            }
+
+            .rankings-title {
+                font-size: 1.5rem;
+            }
+
+            .ranking-number {
+                font-size: 2.5rem;
+            }
+
+            .features {
+                padding: 2rem 1rem;
+            }
+
+            .features-title {
+                font-size: 1.5rem;
+            }
+
+            .notice {
+                padding: 2rem 1rem;
+            }
+
+            .notice-title {
+                font-size: 1.5rem;
+            }
+
+            .gallery {
+                padding: 2rem 1rem;
+            }
+
+            .gallery-title {
+                font-size: 1.5rem;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .alumni {
+                padding: 2rem 1rem;
+            }
+
+            .alumni-title {
+                font-size: 1.5rem;
+            }
+
+            .contact {
+                padding: 2rem 1rem;
+            }
+
+            .contact-title {
+                font-size: 1.5rem;
+            }
+
+            .contact-info {
+                flex-direction: column;
+            }
+
+            .map-container {
+                height: 200px;
+                margin-top: 2rem;
+            }
+
+            .footer {
+                padding: 2rem 1rem 1rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .footer-bottom p {
+                font-size: 0.85rem;
+            }
+        }
+        /* Professional theme overrides + toggle button styles */
+        body.professional-theme {
+            --primary-color: #0b1f2f;
+            --accent-color: #9aa7b2;
+            --accent-dark: #7f8c8d;
+            --success-color: #1f8a70;
+            --light-bg: #f4f6f8;
+            --text-dark: #0d1b22;
+            --text-light: #51636b;
+            --white: #f8f9fa;
+            --gradient-primary: linear-gradient(135deg, #0b1f2f 0%, #123243 100%);
+            --gradient-accent: linear-gradient(135deg, #9aa7b2 0%, #cbd4d9 100%);
+            --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.06);
+            --shadow-md: 0 8px 20px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 12px 36px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Theme toggle button: will be inserted into .navbar-container */
+        .theme-toggle {
+            margin-left: 1rem;
+            padding: 0.45rem 0.9rem;
+            border-radius: 8px;
+            border: 2px solid rgba(255,255,255,0.12);
+            background: transparent;
+            color: var(--white);
+            font-weight: 700;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: var(--transition-fast);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .theme-toggle:focus {
+            outline: 3px solid rgba(154,167,178,0.18);
+            outline-offset: 2px;
+        }
+
+        /* Button appearance when professional theme active */
+        body.professional-theme .theme-toggle {
+            background: var(--white);
+            color: var(--primary-color);
+            border-color: rgba(13,27,34,0.06);
+            box-shadow: var(--shadow-sm);
+        }
+    </style>
+</head>
+<body>
+    <!-- ==================== NAVBAR ==================== -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <!-- Logo -->
+            <a href="#home" class="navbar-logo">
+                <i class="fas fa-graduation-cap"></i>
+                SVCollege
+            </a>
+
+            <!-- Navigation Menu -->
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#departments" class="nav-link">Departments</a></li>
+                <li class="nav-item"><a href="#admission" class="nav-link">Admission</a></li>
+                <li class="nav-item"><a href="#notice" class="nav-link">Notice Board</a></li>
+                <li class="nav-item"><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li class="nav-item"><a href="#alumni" class="nav-link">Alumni</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <!-- Hamburger Menu -->
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero" id="home">
+        <!-- Ranking Badge -->
+        <div class="hero-badge">
+            <i class="fas fa-trophy"></i> Ranked #1 in India
+        </div>
+
+        <div class="hero-content">
+            <h1 class="hero-title">
+                Shri Varshney College
+                <span class="accent">Aligarh</span>
+            </h1>
+            <p class="hero-tagline">"Excellence in Education Since 1947"</p>
+            
+            <div class="hero-buttons">
+                <a href="#admission" class="btn btn-primary">Apply Now</a>
+                <a href="#" class="btn btn-secondary">View Prospectus</a>
+            </div>
+        </div>
+
+        <!-- Statistics Section -->
+        <div class="hero-stats">
+            <div class="stat-item">
+                <span class="stat-number">10K+</span>
+                <span class="stat-label">Alumni</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">99%</span>
+                <span class="stat-label">Placement</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">75+</span>
+                <span class="stat-label">Years Legacy</span>
+            </div>
+        </div>
+
+        <!-- Scroll Down Indicator -->
+        <div class="scroll-indicator">
+            <svg viewBox="0 0 24 24">
+                <path d="M12 2L12 20M12 20L7 15M12 20L17 15"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- ==================== ACCREDITATION SECTION ==================== -->
+    <section class="accreditation">
+        <div class="accreditation-container">
+            <div class="accreditation-item">
+                <div class="accreditation-icon">
+                    <i class="fas fa-medal"></i>
+                </div>
+                <div class="accreditation-text">NAAC A+ Accredited</div>
+            </div>
+            <div class="accreditation-item">
+                <div class="accreditation-icon">
+                    <i class="fas fa-certificate"></i>
+                </div>
+                <div class="accreditation-text">ISO 9001 Certified</div>
+            </div>
+            <div class="accreditation-item">
+                <div class="accreditation-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="accreditation-text">UGC Recognized</div>
+            </div>
+            <div class="accreditation-item">
+                <div class="accreditation-icon">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <div class="accreditation-text">International Standards</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== RANKINGS SECTION ==================== -->
+    <section class="rankings">
+        <div class="rankings-container">
+            <div class="rankings-header">
+                <h2 class="rankings-title">Our Achievements & Rankings</h2>
+            </div>
+
+            <div class="rankings-grid">
+                <div class="ranking-card">
+                    <div class="ranking-number">#1</div>
+                    <div class="ranking-label">National Ranking</div>
+                    <div class="ranking-description">Top Ranked College in India by Educational Excellence Board 2024</div>
+                </div>
+
+                <div class="ranking-card">
+                    <div class="ranking-number">98%</div>
+                    <div class="ranking-label">Student Satisfaction</div>
+                    <div class="ranking-description">Consistently rated highest by students for academic quality and campus life</div>
+                </div>
+
+                <div class="ranking-card">
+                    <div class="ranking-number">500+</div>
+                    <div class="ranking-label">Top Employers</div>
+                    <div class="ranking-description">Graduates recruited by Fortune 500 companies globally</div>
+                </div>
+
+                <div class="ranking-card">
+                    <div class="ranking-number">45+</div>
+                    <div class="ranking-label">International Partnerships</div>
+                    <div class="ranking-description">Collaborations with leading universities worldwide</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== WORLD CLASS FEATURES ==================== -->
+    <section class="features">
+        <div class="features-container">
+            <div class="features-header">
+                <h2 class="features-title">World-Class Campus Facilities</h2>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3>State-of-the-Art Library</h3>
+                    <p>Advanced digital library with 50,000+ books and online journals from prestigious publishers worldwide</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-flask-vial"></i>
+                    </div>
+                    <h3>Advanced Laboratories</h3>
+                    <p>High-tech laboratories equipped with latest scientific instruments for research and experimentation</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <h3>Smart Campus</h3>
+                    <p>100% WiFi coverage with high-speed internet and digital learning platforms throughout campus</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Expert Faculty</h3>
+                    <p>Renowned professors with PhD, international publications, and years of industry experience</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Sports Excellence</h3>
+                    <p>Olympic-sized facilities with coaching from national and international sports champions</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Modern Infrastructure</h3>
+                    <p>Green campus with sustainable architecture, eco-friendly facilities, and smart buildings</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ABOUT SECTION ==================== -->
+    <section class="about" id="about">
+        <div class="about-container">
+            <!-- Section Header -->
+            <div class="about-header">
+                <h2 class="about-title">About Our College</h2>
+                <p class="about-subtitle">
+                    A distinguished institution of higher learning with a legacy of academic excellence, 
+                    providing world-class education and fostering character development.
+                </p>
+            </div>
+
+            <!-- Two Column Layout: Image + Text -->
+            <div class="about-content">
+                <!-- Image Column -->
+                <div class="about-image">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Crect fill='%231a3a52' width='400' height='400'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-size='48' fill='%23d4af37' font-family='Arial'%3ECollege Campus%3C/text%3E%3Ccircle cx='100' cy='100' r='40' fill='%23d4af37' opacity='0.2'/%3E%3Ccircle cx='350' cy='350' r='50' fill='%23d4af37' opacity='0.2'/%3E%3C/svg%3E" alt="Campus">
+                </div>
+
+                <!-- Text Column -->
+                <div class="about-text">
+                    <h3>Our Heritage & Mission</h3>
+                    <p>
+                        Established in 1947, Shri Varshney College has been a beacon of knowledge and 
+                        enlightenment for over seven decades. Our institution is committed to providing 
+                        quality education that combines academic excellence with practical skills, 
+                        fostering holistic development of our students.
+                    </p>
+                    <p>
+                        We believe in nurturing critical thinking, creativity, and ethical values in our 
+                        students. Our experienced faculty members ensure that every student receives 
+                        personalized attention and guidance needed to achieve their full potential.
+                    </p>
+
+                    <!-- Highlights -->
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <strong>75+ Years</strong>
+                            <p>Of Legacy & Excellence</p>
+                        </div>
+                        <div class="highlight-item">
+                            <strong>10,000+</strong>
+                            <p>Alumni Worldwide</p>
+                        </div>
+                        <div class="highlight-item">
+                            <strong>99%</strong>
+                            <p>Placement Rate</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Principal Message Section -->
+            <div class="principal-section">
+                <!-- Principal Image -->
+                <div class="principal-image">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 150 150'%3E%3Ccircle cx='75' cy='75' r='75' fill='%231a3a52'/%3E%3Ccircle cx='75' cy='50' r='25' fill='%23d4af37'/%3E%3Cpath d='M45 85 Q45 95 75 95 Q105 95 105 85' fill='%23d4af37'/%3E%3C/svg%3E" alt="Principal">
+                </div>
+
+                <!-- Principal Message -->
+                <div class="principal-content">
+                    <h4>Dr. Vikram Sharma</h4>
+                    <p class="position">Principal, Shri Varshney College</p>
+                    <p>
+                        "We are dedicated to transforming lives through quality education and character building. 
+                        Our institution serves not just to impart knowledge but to develop responsible citizens who 
+                        contribute meaningfully to society. Every student here is encouraged to dream big and work 
+                        towards achieving excellence in their chosen field."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== DEPARTMENTS SECTION ==================== -->
+    <section class="departments" id="departments">
+        <div class="departments-container">
+            <!-- Section Header -->
+            <div class="departments-header">
+                <h2 class="departments-title">Our Departments</h2>
+                <p class="departments-subtitle">
+                    Explore our diverse range of academic departments offering excellence in education 
+                    across multiple disciplines and fields of study.
+                </p>
+            </div>
+
+            <!-- Departments Grid -->
+            <div class="departments-grid">
+                <!-- Commerce Department -->
+                <div class="dept-card">
+                    <div class="dept-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Commerce</h3>
+                    <p>
+                        Master the world of business and finance. Our Commerce department prepares students 
+                        for successful careers in accounting, finance, and business management.
+                    </p>
+                    <a href="#" class="dept-link">Learn More</a>
+                </div>
+
+                <!-- Science Department -->
+                <div class="dept-card">
+                    <div class="dept-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3>Science</h3>
+                    <p>
+                        Discover the universe through physics, chemistry, and biology. Our science programs 
+                        combine theoretical knowledge with hands-on laboratory experience.
+                    </p>
+                    <a href="#" class="dept-link">Learn More</a>
+                </div>
+
+                <!-- Arts Department -->
+                <div class="dept-card">
+                    <div class="dept-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Arts</h3>
+                    <p>
+                        Explore humanities, literature, history, and social sciences. Develop critical thinking 
+                        and analytical skills through diverse and engaging coursework.
+                    </p>
+                    <a href="#" class="dept-link">Learn More</a>
+                </div>
+
+                <!-- Law Department -->
+                <div class="dept-card">
+                    <div class="dept-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3>Law</h3>
+                    <p>
+                        Prepare for a career in law with comprehensive legal education. Our faculty includes 
+                        experienced practitioners and scholars in various legal disciplines.
+                    </p>
+                    <a href="#" class="dept-link">Learn More</a>
+                </div>
+
+                <!-- Teacher Education -->
+                <div class="dept-card">
+                    <div class="dept-icon">
+                        <i class="fas fa-chalkboard-user"></i>
+                    </div>
+                    <h3>Teacher Education</h3>
+                    <p>
+                        Become an inspiring educator. Our teacher education programs focus on pedagogical excellence 
+                        and the development of effective teaching methodologies.
+                    </p>
+                    <a href="#" class="dept-link">Learn More</a>
+                </div>
+
+                <!-- Sports & Physical Education -->
+                <div class="dept-card">
+                    <div class="dept-icon">
+                        <i class="fas fa-basketball"></i>
+                    </div>
+                    <h3>Sports & PE</h3>
+                    <p>
+                        Excel in physical education and sports science. Build leadership, fitness, and athletic 
+                        excellence through our comprehensive sports programs.
+                    </p>
+                    <a href="#" class="dept-link">Learn More</a>
+                </div>
+
+                <!-- Job-Oriented Courses -->
+                <div class="dept-card">
+                    <div class="dept-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Job-Oriented Courses</h3>
+                    <p>
+                        Develop industry-ready skills with our specialized vocational and professional courses 
+                        designed for immediate employment opportunities.
+                    </p>
+                    <a href="#" class="dept-link">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ADMISSION SECTION ==================== -->
+    <section class="admission" id="admission">
+        <div class="admission-container">
+            <!-- Section Header -->
+            <div class="admission-header">
+                <h2 class="admission-title">Admission Process</h2>
+                <p class="admission-subtitle">
+                    Join our college and be part of a legacy of academic excellence and character development. 
+                    Follow the simple steps below to apply.
+                </p>
+            </div>
+
+            <!-- Two Column Content: Instructions + Fee Table -->
+            <div class="admission-content">
+                <!-- Left Column: Instructions -->
+                <div class="admission-instructions">
+                    <h3>Admission Instructions</h3>
+                    <ul class="instructions-list">
+                        <li>Check eligibility criteria for your desired program</li>
+                        <li>Complete the online application form</li>
+                        <li>Upload required documents (10th & 12th mark sheets, ID proof)</li>
+                        <li>Pay the application fee online</li>
+                        <li>Receive admission status via email</li>
+                        <li>Complete online registration and fee payment</li>
+                        <li>Collect admission letter and ID card from campus</li>
+                    </ul>
+
+                    <!-- Important Dates Box -->
+                    <div class="important-dates">
+                        <h4><i class="fas fa-calendar-alt"></i> Important Dates</h4>
+                        <div class="dates-item">
+                            <strong>Application Start:</strong>
+                            <span>15 June 2024</span>
+                        </div>
+                        <div class="dates-item">
+                            <strong>Application Deadline:</strong>
+                            <span>31 July 2024</span>
+                        </div>
+                        <div class="dates-item">
+                            <strong>Merit List:</strong>
+                            <span>10 August 2024</span>
+                        </div>
+                        <div class="dates-item">
+                            <strong>Classes Begin:</strong>
+                            <span>01 September 2024</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Fee Structure -->
+                <div class="fee-structure">
+                    <h3>Fee Structure</h3>
+                    <table class="fee-table">
+                        <thead>
+                            <tr>
+                                <th>Course</th>
+                                <th>Annual Fee</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Bachelor of Commerce (B.Com)</td>
+                                <td>₹45,000</td>
+                            </tr>
+                            <tr>
+                                <td>Bachelor of Science (B.Sc)</td>
+                                <td>₹50,000</td>
+                            </tr>
+                            <tr>
+                                <td>Bachelor of Arts (B.A)</td>
+                                <td>₹40,000</td>
+                            </tr>
+                            <tr>
+                                <td>Bachelor of Laws (LL.B)</td>
+                                <td>₹60,000</td>
+                            </tr>
+                            <tr>
+                                <td>B.Ed (Teacher Education)</td>
+                                <td>₹48,000</td>
+                            </tr>
+                            <tr>
+                                <td>B.P.Ed (Sports & PE)</td>
+                                <td>₹52,000</td>
+                            </tr>
+                            <tr>
+                                <td>Vocational Courses</td>
+                                <td>₹35,000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <!-- CTA Buttons -->
+                    <div class="admission-cta">
+                        <a href="#" class="btn btn-primary">
+                            <i class="fas fa-download"></i> Download Prospectus
+                        </a>
+                        <a href="#" class="btn btn-secondary">
+                            <i class="fas fa-edit"></i> Apply Online
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Info Boxes -->
+            <div class="admission-info-grid">
+                <div class="info-box">
+                    <div class="info-box-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h4>Required Documents</h4>
+                    <p>
+                        10th & 12th mark sheets, birth certificate, address proof, 
+                        character certificate, and recent passport-size photographs
+                    </p>
+                </div>
+
+                <div class="info-box">
+                    <div class="info-box-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h4>Eligibility Criteria</h4>
+                    <p>
+                        Pass 12th examination from a recognized board with required 
+                        aggregate percentage as per course requirements
+                    </p>
+                </div>
+
+                <div class="info-box">
+                    <div class="info-box-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h4>Need Help?</h4>
+                    <p>
+                        Contact our admission office: +91-9876543210 or 
+                        email: admission@varshneycollege.edu
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== NOTICE BOARD SECTION ==================== -->
+    <section class="notice" id="notice">
+        <div class="notice-container">
+            <div class="notice-header">
+                <h2 class="notice-title">Notice Board</h2>
+                <p class="notice-subtitle">
+                    Stay updated with the latest announcements and important notices from the college.
+                </p>
+            </div>
+
+            <div class="notice-items">
+                <div class="notice-item">
+                    <div class="notice-date">
+                        <i class="fas fa-calendar"></i> 15 February 2024
+                    </div>
+                    <h3 class="notice-title-text">Admission Portal Open for 2024-25</h3>
+                    <p class="notice-description">
+                        The online admission portal has been opened for all undergraduate and postgraduate programs. 
+                        Eligible students are invited to apply before 31 July 2024.
+                    </p>
+                    <a href="#" class="notice-link">
+                        Read More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="notice-item">
+                    <div class="notice-date">
+                        <i class="fas fa-calendar"></i> 10 February 2024
+                    </div>
+                    <h3 class="notice-title-text">Results Published - January 2024 Examinations</h3>
+                    <p class="notice-description">
+                        The results for January 2024 examinations have been published online. 
+                        Students can check their results in the student portal using their login credentials.
+                    </p>
+                    <a href="#" class="notice-link">
+                        Check Results <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="notice-item">
+                    <div class="notice-date">
+                        <i class="fas fa-calendar"></i> 05 February 2024
+                    </div>
+                    <h3 class="notice-title-text">Campus Placement Drive - February 2024</h3>
+                    <p class="notice-description">
+                        Major IT and corporate companies will conduct recruitment drives this month. 
+                        Interested students must register before 28 February 2024.
+                    </p>
+                    <a href="#" class="notice-link">
+                        Register Now <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="notice-item">
+                    <div class="notice-date">
+                        <i class="fas fa-calendar"></i> 01 February 2024
+                    </div>
+                    <h3 class="notice-title-text">Annual Sports Festival 2024 - Registration Open</h3>
+                    <p class="notice-description">
+                        Join our annual sports festival featuring various indoor and outdoor competitions. 
+                        Registration deadline is 20 February 2024. Forms available at sports office.
+                    </p>
+                    <a href="#" class="notice-link">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="notice-item">
+                    <div class="notice-date">
+                        <i class="fas fa-calendar"></i> 25 January 2024
+                    </div>
+                    <h3 class="notice-title-text">Scholarship Opportunities for Meritorious Students</h3>
+                    <p class="notice-description">
+                        New scholarship programs are available for students based on academic performance. 
+                        Apply through the student portal before 15 March 2024.
+                    </p>
+                    <a href="#" class="notice-link">
+                        Apply Today <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="view-all-notices">
+                <a href="#" class="btn btn-primary">View All Notices</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== GALLERY SECTION ==================== -->
+    <section class="gallery" id="gallery">
+        <div class="gallery-container">
+            <div class="gallery-header">
+                <h2 class="gallery-title">Campus Gallery</h2>
+                <p class="gallery-subtitle">
+                    Explore the beauty and vibrancy of our campus through our photo gallery.
+                </p>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%231a3a52' width='400' height='300'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-size='24' fill='%23d4af37' font-family='Arial'%3EMain Building%3C/text%3E%3C/svg%3E" alt="Main Building">
+                    <div class="gallery-overlay">
+                        <div class="zoom-icon">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%23d4af37' width='400' height='300'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-size='24' fill='%231a3a52' font-family='Arial'%3ELibrary%3C/text%3E%3C/svg%3E" alt="Library">
+                    <div class="gallery-overlay">
+                        <div class="zoom-icon">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%23666' width='400' height='300'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-size='24' fill='%23d4af37' font-family='Arial'%3ELaboratory%3C/text%3E%3C/svg%3E" alt="Laboratory">
+                    <div class="gallery-overlay">
+                        <div class="zoom-icon">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%232a5a72' width='400' height='300'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-size='24' fill='%23d4af37' font-family='Arial'%3ECampus Grounds%3C/text%3E%3C/svg%3E" alt="Campus Grounds">
+                    <div class="gallery-overlay">
+                        <div class="zoom-icon">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%23444' width='400' height='300'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-size='24' fill='%23d4af37' font-family='Arial'%3ESports Complex%3C/text%3E%3C/svg%3E" alt="Sports Complex">
+                    <div class="gallery-overlay">
+                        <div class="zoom-icon">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%231a3a52' width='400' height='300'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-size='24' fill='%23d4af37' font-family='Arial'%3EStadent Hostel%3C/text%3E%3C/svg%3E" alt="Student Hostel">
+                    <div class="gallery-overlay">
+                        <div class="zoom-icon">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ALUMNI SECTION ==================== -->
+    <section class="alumni" id="alumni">
+        <div class="alumni-container">
+            <div class="alumni-header">
+                <h2 class="alumni-title">Our Alumni Network</h2>
+                <p class="alumni-subtitle">
+                    Proud testimonials from our successful alumni making a difference worldwide.
+                </p>
+            </div>
+
+            <div class="testimonials">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>Rajesh Kumar</h4>
+                            <p>CEO, Tech Solutions India</p>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">
+                        "Shri Varshney College provided me with an excellent foundation in commerce and business. 
+                        The faculty guidance and networking opportunities were instrumental in my success."
+                    </p>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>Dr. Priya Singh</h4>
+                            <p>Medical Researcher, AIIMS Delhi</p>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">
+                        "The science program at this college is exceptional. The lab facilities and research opportunities 
+                        prepared me well for my medical career and further studies."
+                    </p>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>Arun Patel</h4>
+                            <p>Senior Advocate, Supreme Court</p>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">
+                        "The law program equipped me with strong analytical and critical thinking skills. 
+                        The college's emphasis on ethics and values shaped my professional journey."
+                    </p>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="alumni-cta">
+                <h3>Join Our Alumni Network</h3>
+                <p>
+                    Connect with thousands of alumni worldwide. Share your success stories, network, 
+                    and contribute to the college's growing legacy of excellence.
+                </p>
+                <a href="#" class="btn btn-primary">Register as Alumni</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACT SECTION ==================== -->
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <div class="contact-header">
+                <h2 class="contact-title">Get In Touch</h2>
+                <p class="contact-subtitle">
+                    We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+                </p>
+            </div>
+
+            <div class="contact-content">
+                <!-- Contact Form -->
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+
+                    <button type="submit" class="form-submit">Send Message</button>
+                </form>
+
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h4>Address</h4>
+                        <p>Shri Varshney College<br>Marris Road, Aligarh 202001<br>Uttar Pradesh, India</p>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h4>Phone</h4>
+                        <p>
+                            Phone: <a href="tel:+919876543210">+91 9876 543 210</a><br>
+                            Office: <a href="tel:+915712406789">+91 5712 406 789</a>
+                        </p>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h4>Email</h4>
+                        <p>
+                            General: <a href="mailto:info@varshneycollege.edu">info@varshneycollege.edu</a><br>
+                            Admission: <a href="mailto:admission@varshneycollege.edu">admission@varshneycollege.edu</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map -->
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3526.7637435487476!2d77.98485!3d28.36969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce2d82d5c5555%3A0x1234567890abc!2sAligarh!5e0!3m2!1sen!2sin!4v1234567890000" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <!-- About Section -->
+                <div class="footer-section">
+                    <h4>About College</h4>
+                    <p style="color: rgba(255, 255, 255, 0.8); font-size: 0.95rem; line-height: 1.6;">
+                        Shri Varshney College is dedicated to providing quality education and fostering 
+                        character development for over 75 years.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#departments">Departments</a></li>
+                        <li><a href="#admission">Admission</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Academics -->
+                <div class="footer-section">
+                    <h4>Academics</h4>
+                    <ul>
+                        <li><a href="#">Commerce Program</a></li>
+                        <li><a href="#">Science Program</a></li>
+                        <li><a href="#">Arts Program</a></li>
+                        <li><a href="#">Law Program</a></li>
+                        <li><a href="#">Online Courses</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social Media -->
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <p style="color: rgba(255, 255, 255, 0.8); font-size: 0.95rem; margin-bottom: 1rem;">
+                        Connect with us on social media for latest updates and news.
+                    </p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" title="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon" title="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon" title="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p>
+                    &copy; 2025 <span class="accent">Shri Varshney College, Aligarh</span>. All rights reserved By Deepak.
+                </p>
+                <p>
+                    Designed & Developed with <span class="accent">❤</span> | Terms & Conditions | Privacy Policy
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // ==================== HAMBURGER MENU ==================== 
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu when a link is clicked
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // ==================== SCROLL EFFECTS ==================== 
+        // Add background blur on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.backgroundColor = 'rgba(26, 58, 82, 0.98)';
+                navbar.style.backdropFilter = 'blur(15px)';
+            } else {
+                navbar.style.backgroundColor = 'rgba(26, 58, 82, 0.95)';
+                navbar.style.backdropFilter = 'blur(10px)';
+            }
+        });
+
+        // ==================== PARALLAX EFFECT ==================== 
+        window.addEventListener('scroll', () => {
+            const heroContent = document.querySelector('.hero-content');
+            if (heroContent) {
+                const scrollY = window.scrollY;
+                heroContent.style.transform = `translateY(${scrollY * 0.5}px)`;
+                heroContent.style.opacity = Math.max(0, 1 - scrollY / 800);
+            }
+        });
+
+        // ==================== CONTACT FORM SUBMISSION ==================== 
+        const contactForm = document.querySelector('.contact-form');
+                if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form values
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const subject = document.getElementById('subject').value;
+                const message = document.getElementById('message').value;
+                
+                // Basic validation
+                if (name && email && subject && message) {
+                    // Show success message with animation
+                    const button = contactForm.querySelector('.form-submit');
+                    const originalText = button.innerText;
+                    
+                    button.innerText = '✓ Message Sent!';
+                    button.style.backgroundColor = 'var(--primary-color)';
+                    button.style.transform = 'scale(1.05)';
+                    
+                    // Reset form
+                    contactForm.reset();
+                    
+                    // Restore button after 3 seconds
+                    setTimeout(() => {
+                        button.innerText = originalText;
+                        button.style.backgroundColor = '';
+                        button.style.transform = 'scale(1)';
+                    }, 3000);
+                } else {
+                    alert('Please fill in all fields');
+                }
+            });
+        }
+
+        // ==================== SMOOTH SCROLL ANIMATIONS ==================== 
+        const observerOptions = {
+            threshold: 0.15,
+            rootMargin: '0px 0px -80px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                    
+                    // Stagger animation for child elements
+                    const children = entry.target.querySelectorAll('[class*="card"], [class*="item"]');
+                    children.forEach((child, idx) => {
+                        setTimeout(() => {
+                            child.style.opacity = '1';
+                            child.style.transform = 'translateY(0)';
+                        }, idx * 100);
+                    });
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // ==================== SMOOTH SCROLL FOR ANCHOR LINKS ==================== 
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        const offsetTop = target.offsetTop - 80;
+                        window.scrollTo({
+                            top: offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+
+        // ==================== ADD SCROLL-TO-TOP BUTTON WITH ANIMATION ==================== 
+        const scrollTopBtn = document.createElement('button');
+        scrollTopBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
+        scrollTopBtn.style.cssText = `
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-accent);
+            color: var(--primary-color);
+            border: none;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: none;
+            z-index: 999;
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+            box-shadow: 0 6px 25px rgba(212, 175, 55, 0.3);
+        `;
+
+        document.body.appendChild(scrollTopBtn);
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                scrollTopBtn.style.display = 'flex';
+                scrollTopBtn.style.alignItems = 'center';
+                scrollTopBtn.style.justifyContent = 'center';
+                scrollTopBtn.style.opacity = '1';
+                scrollTopBtn.style.pointerEvents = 'auto';
+            } else {
+                scrollTopBtn.style.opacity = '0';
+                scrollTopBtn.style.pointerEvents = 'none';
+            }
+        });
+
+        scrollTopBtn.addEventListener('click', () => {
+            // Smooth scroll to top
+            const duration = 1000;
+            const start = window.scrollY;
+            const startTime = performance.now();
+
+            const ease = (t) => {
+                // Easing function: easeInOutCubic
+                return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+            };
+
+            const scroll = (currentTime) => {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                const easedProgress = ease(progress);
+                window.scrollTo(0, start - start * easedProgress);
+                
+                if (progress < 1) {
+                    requestAnimationFrame(scroll);
+                }
+            };
+
+            requestAnimationFrame(scroll);
+        });
+
+        scrollTopBtn.addEventListener('mouseover', () => {
+            scrollTopBtn.style.transform = 'translateY(-8px) scale(1.1)';
+            scrollTopBtn.style.boxShadow = '0 12px 40px rgba(212, 175, 55, 0.4)';
+        });
+
+        scrollTopBtn.addEventListener('mouseout', () => {
+            scrollTopBtn.style.transform = 'translateY(0) scale(1)';
+            scrollTopBtn.style.boxShadow = '0 6px 25px rgba(212, 175, 55, 0.3)';
+        });
+
+        // ==================== ELEMENT ANIMATION ON LOAD ==================== 
+        window.addEventListener('load', () => {
+            // Animate navbar on load
+            const navbar = document.querySelector('.navbar');
+            navbar.style.animation = 'slideDownFade 0.6s ease-out';
+
+            // Animate hero on load
+            const heroTitle = document.querySelector('.hero-title');
+            const heroTagline = document.querySelector('.hero-tagline');
+            const heroButtons = document.querySelector('.hero-buttons');
+
+            if (heroTitle) heroTitle.style.animation = 'slideDownFade 0.8s ease-out';
+            if (heroTagline) heroTagline.style.animation = 'slideUpFade 0.8s ease-out 0.2s backwards';
+            if (heroButtons) heroButtons.style.animation = 'slideUpFade 0.8s ease-out 0.4s backwards';
+        });
+
+        // ==================== ANIMATE ON MOUSE MOVE (Subtle effect) ==================== 
+        document.addEventListener('mousemove', (e) => {
+            const mouseX = e.clientX / window.innerWidth;
+            const mouseY = e.clientY / window.innerHeight;
+
+            // Apply subtle parallax to hero section
+            const heroContent = document.querySelector('.hero-content');
+            if (heroContent && window.scrollY < 100) {
+                heroContent.style.transform = `
+                    translateY(${window.scrollY * 0.5}px)
+                    translateX(${(mouseX - 0.5) * 20}px)
+                `;
+            }
+        });
+
+        // ==================== SMOOTH INPUT FOCUS ANIMATIONS ==================== 
+        const formInputs = document.querySelectorAll('.form-group input, .form-group textarea');
+        formInputs.forEach(input => {
+            input.addEventListener('focus', function() {
+                this.parentElement.style.animation = 'pulse 0.4s ease-out';
+            });
+        });
+
+        // ==================== BUTTON RIPPLE EFFECT ==================== 
+        const buttons = document.querySelectorAll('.btn, .form-submit, .dept-link');
+        buttons.forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                const ripple = document.createElement('span');
+                const rect = this.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                const x = e.clientX - rect.left - size / 2;
+                const y = e.clientY - rect.top - size / 2;
+
+                ripple.style.cssText = `
+                    position: absolute;
+                    width: ${size}px;
+                    height: ${size}px;
+                    background: rgba(255, 255, 255, 0.5);
+                    border-radius: 50%;
+                    left: ${x}px;
+                    top: ${y}px;
+                    pointer-events: none;
+                    animation: ripple-animation 0.6s ease-out;
+                `;
+
+                this.style.position = 'relative';
+                this.style.overflow = 'hidden';
+                this.appendChild(ripple);
+
+                setTimeout(() => ripple.remove(), 600);
+            });
+        });
+
+        // Add ripple animation to stylesheet
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes ripple-animation {
+                0% {
+                    transform: scale(0);
+                    opacity: 1;
+                }
+                100% {
+                    transform: scale(1);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
